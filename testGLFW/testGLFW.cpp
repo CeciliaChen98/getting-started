@@ -9,10 +9,15 @@
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
-   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+   if (action == GLFW_PRESS)
    {
-      std::cout<< "Pressed escape\n";
-      glfwSetWindowShouldClose(window, GLFW_TRUE);
+      if(key == GLFW_KEY_ESCAPE){
+        std::cout<< "Pressed escape\n";
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
+      }
+      else if(key == GLFW_KEY_UP){
+        std::cout<< "Pressed up\n";
+      }
    }
 }
 
